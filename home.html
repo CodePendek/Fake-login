@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <main>
+    <nav>
+      <a href="#">Home</a>
+      <div id="btnBurger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <a href="#" class="dropDown">Keluar & hapus data</a>
+    </nav>
+    
+    <article>
+      <h4>Selamat datang kembali <span>username</span> 👋</h4>
+      <b></b>
+      <h4 id="nama">Nama lengkap</h4>
+      <h5>email</h5>
+    </article>
+  </main>
+  
+  <script type="text/javascript" charset="utf-8">
+    const nama = localStorage.getItem("nama") || "Alif rahman"
+    const jk = localStorage.getItem("jk")
+    const user = localStorage.getItem("user")
+    const email = localStorage.getItem("email") || "example@email.com"
+
+    const i = document.querySelector("b")
+    i. innerText = jk === "P" ? "👩🏻‍🦰" : "👨🏻‍🦰"
+    
+    const span = document.querySelector("h4 span")
+    span.innerText = user
+    
+    const h5 = document.querySelector("h5")
+    h5.innerText = email
+    
+    const h4 = document.querySelector("h4#nama")
+    h4.innerText = nama
+    
+    const burger = document.querySelector("#btnBurger")
+    const dropMenu = document.querySelector(".dropDown")
+    burger.addEventListener("click", e => {
+      console.log(dropMenu.classList)
+      dropMenu.classList.toggle("active")
+    })
+    
+    dropMenu.addEventListener("click", e => {
+      localStorage.clear()
+      window.location.href = "/"
+    })
+  </script>
+</body>
+</html>

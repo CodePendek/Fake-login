@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login page</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+      <form method="get">
+        <h1>Silahkan login</h1>
+        <span class="hidden"></span>
+        <div>
+          <label>Nama pengguna</label>
+          <input type="text"/>
+        </div>
+        <div>
+          <label>Kata sandi</label>
+          <input type="password"/>
+        </div>
+        <button type="submit">Masuk</button>
+        <span id="signup">Belum punya akun? <a href="#" id="toSignUp">Daftar disini</a></span>
+      </form>
+      
+      <form class="hide">
+        <h1>Daftar baru</h1>
+        <span class="hidden"></span>
+        <div>
+          <label>Nama lengkap</label>
+          <input type="text" id="nama">
+        </div>
+        <div>
+          <span>Jenis kelamin</span>
+          <section id="jk">
+            <label>
+              <input type="radio" name="sex" value="L" checked /> Laki-laki
+            </label>
+            <label>
+              <input type="radio" name="sex" value="P"> Perempuan
+            </label>
+          </section>
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="email"/>
+        </div>
+        <hr>
+        <div>
+          <label>Nama pengguna</label>
+          <input type="text" id="user">
+        </div>
+        <div>
+          <label>Kata sandi</label>
+          <input type="password" id="pass">
+        </div>
+        <button class="submit">Daftar</button>
+        <span id="login">Sudah punya akun? <a href="#" id="toLogin">Masuk disini</a></span>
+      </form>
+    
+  </main>
+</body>
+</html>
